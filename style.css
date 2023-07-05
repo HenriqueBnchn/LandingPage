@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+:root {
+  --hue: 220;
+  --luminance: 1;
+  --text-black: 100%;
+
+
+  --body-color: hsla(var(--hue), 0%, 10%, var(--luminance));
+  --text-active: hsla(var(--hue), 83%, var(--text-black), 1);
+  --text-primary: hsla(var(--hue), 12%, var(--text-black), 1);
+  --text-secondary: hsla(var(--hue), 7%, 44%, 1);
+
+
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 62.5%;
+
+
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--body-color);
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.text_active {
+  color: var(--text-active) !important;
+  font-size: 2.4rem;
+  margin-top: -.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  padding: 8rem 0;
+}
+
+.header {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.switch_icon {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  object-position: center;
+
+  transition: 0.2s;
+}
+
+.switch_icon:hover {
+  cursor: pointer;
+  filter: brightness(105%);
+}
+
+
+.options_div {
+  display: flex;
+  align-items: center;
+}
+
+.options_div ul {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: 0.5s;
+}
+
+.options_div ul li {
+  transition: 0.2s;
+}
+
+.options_div ul li:hover:not(.text_active) {
+  cursor: pointer;
+  transform: scale(105%);
+  filter: brightness(150%) !important;
+}
+
+.about_me {
+  display: flex;
+  position: relative;
+  height: 50rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about_me h1 {
+  font-size: 10.2rem;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+.about_me h2 {
+  font-size: 8.2rem;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+#profile_pic {
+
+  height: 100%;
+  -webkit-filter: drop-shadow(5px 0px 5px #222);
+  filter: drop-shadow(5px 0px 5px #222);
+}
+.social{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.social img, .social svg{
+  height: 60%;
+}
