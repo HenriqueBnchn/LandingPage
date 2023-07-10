@@ -21,11 +21,19 @@
     <div class="container ">
       <div class="header">
         <div class="logo">
-          <svg fill="#fff" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"></path></g></svg>
+          <svg fill="#fff" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z">
+              </path>
+            </g>
+          </svg>
         </div>
         <div class="options_div">
           <ul>
-            <li id="sobremim_option" class="text_active">Sobre mim</li>
+            <li id="sobremim_option">Sobre mim</li>
             <li id="habilidades_option">Habilidades</li>
             <li id="hobbies_option">Hobbies</li>
           </ul>
@@ -33,11 +41,18 @@
       </div>
 
       <div class="hero_div">
-        <div>
-          <h2>Henrique</h2>
-          <h1>Bianchini.</h1>
+        <div class="hero_text">
+          <span class="bracket_left">{</span>
+          <span class="bracket_right">}</span>
+          <div class="hero_name">
+            <h1>Henrique</h1>
+            <h1>Bianchini</h1>
+          </div>
         </div>
-        <img id="profile_pic" src="./assets/perfil_avatar.png" alt="">
+        <div class="hero_images">
+          <img class="profile_pic front" src="./assets/perfil_avatar.png" alt="">
+          <img class="profile_pic back" src="./assets/perfil_final.png" alt=""> 
+        </div>
       </div>
 
     </div>
@@ -45,26 +60,22 @@
   <section class="bg-2">
     <div class="container">
       <div class="sobre_mim_div ">
-        <h1 class="reveal fade-bottom">Sobre mim</h1>
-        <p class="reveal fade-bottom-delay">Desenvolvedor FullStack com conhecimentos nas linguagens:<strong> Javascript, ReactJS, NodeJS e SQL. </strong>E em bibliotecas/frameworks como: <strong>Styled-Components, Express, Vite e KnexJS.</strong> Entusiasta da tecnologia, busco estudar e entender tudo que tenho contato. Amante de designs e animações modernas e minimalistas. Formado em <strong>Análise e Desenvolvimento de Sistemas</strong> pela UNESC.</p>
-
-      </div>
-    </div>
-
-  </section>
-  <section class="bg-1">
-    <div class="container">
-      <div class="habilidades_div reveal fade-bottom-delay">
-        <div class="collumns">
+        <h1 class="reveal fade-bottom-1">Sobre mim</h1>
+        <p class="reveal fade-bottom-2 col1_content">Desenvolvedor FullStack com conhecimentos nas linguagens:<strong> Javascript,
+            ReactJS, NodeJS e SQL. </strong>E em ferramentas/frameworks como: <strong>Styled-Components, Express, Vite e
+            KnexJS.</strong> Entusiasta da tecnologia, busco estudar e entender tudo que tenho contato. Amante de paletas monocromáticas e de
+          designs e animações modernas e minimalistas. Formado em <strong>Análise e Desenvolvimento de Sistemas</strong>
+          pela UNESC (2021).</p>
+        <div class="collumns reveal fade-bottom-3">
           <div class="collumn">
             <i class="fa-solid fa-language"></i>
             <h3>Linguagens</h3>
             <ul>
               <li>Javascript</li>
+              <li>SCSS</li>
               <li>Node.js</li>
               <li>React.js</li>
               <li>SQL</li>
-              <li>Git</li>
             </ul>
           </div>
           <div class="collumn">
@@ -75,10 +86,11 @@
               <li>Vite</li>
               <li>Express</li>
               <li>Knex.js</li>
-              <li>Consumo de API's</li>
+              <li>Git</li>
             </ul>
           </div>
         </div>
+
       </div>
     </div>
 
@@ -86,8 +98,39 @@
 
   <section class="bg-3">
     <div class="container">
-      <div class="sobre_mim_div" style="margin-top: 300px;">
-        <h1>Sobre mim</h1>
+      <div class="habilidades_div">
+        <h1 class="reveal fade-bottom-1">Habilidades</h1>
+        <div class="habilidades_content_col2">
+          <div class="reveal fade-left-1 col2_content_image">
+            <img  src="./assets/teamwork_vector.png" alt="">
+          </div>
+          <div class="reveal fade-right-1 col2_content_text">
+            <p>
+              Possuo experiência como <strong>Suporte Técnico à Domicílio</strong>, o que ajudou a desenvolver minhas habilidades de resolução de problemas e de análise técnica.
+            </p>
+          </div>
+        </div>
+        <div class="habilidades_content_col2">
+          <div class=" reveal fade-left-2 col2_content_text">
+            Além disso, gerenciei minha própria loja online, que junto com a experiência de atendimento ao público, permitiu evoluir minhas <strong>habilidades interpessoais</strong>
+          </div>
+          <div class="reveal fade-right-2 col2_content_image">
+            <img  src="./assets/c2c.png" alt="">
+          </div>
+        </div>
+        <div class="col1_content">
+          <p></p>
+        </div>
+        <div class="habilidades_content_left"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="bg-1">
+    <div class="container">
+      <div class="hobbies_div">
+        <h1>Hobbies</h1>
         <p>Formado em ADS pela UNESC Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo dolorem
           explicabo ut aperiam porro similique ea facere, cum ullam maxime natus a! Nemo, delectus? Ullam aliquid
           molestias delectus assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nostrum
@@ -97,7 +140,6 @@
     </div>
 
   </section>
-
 
 
 

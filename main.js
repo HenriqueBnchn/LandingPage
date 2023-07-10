@@ -1,7 +1,7 @@
 
 
 const root = document.querySelector(':root')
-
+const body = document.querySelector('body')
 
 const btn_switch_on = document.querySelector(".on")
 const btn_switch_off = document.querySelector(".off")
@@ -10,9 +10,16 @@ const header = document.querySelector(".header")
 const hero = document.querySelector(".hero_div")
 
 const sobremim_option = document.querySelector('#sobremim_option')
+const sobre_mim_div = document.querySelector('.sobre_mim_div')
+
 const habilidades_option = document.querySelector('#habilidades_option')
+const habilidades_div = document.querySelector('.habilidades_div')
+
+
 const hobbies_option = document.querySelector('#hobbies_option')
-const ativo = "text_active"
+const hobbies_div = document.querySelector('.hobbies_div')
+const hobbies_y = (hobbies_div.getBoundingClientRect().top - 100)
+
 
 const social_icons = document.querySelectorAll('.social svg')
 
@@ -21,6 +28,7 @@ btn_switch_on.addEventListener('click', () => {
   root.classList.remove('light')
   btn_switch_on.style.display = 'none'
   btn_switch_off.style.display = 'block'
+
   social_icons.forEach(icon => {
     icon.setAttribute('fill', '#fff')
   })
@@ -37,34 +45,26 @@ btn_switch_off.addEventListener('click', () => {
 
 
 sobremim_option.addEventListener('click', () => {
-  sobremim_option.classList.add(ativo)
-  habilidades_option.classList.remove(ativo)
-  hobbies_option.classList.remove(ativo)
-
-  scrollTo(0, 900)
+  let h = (sobre_mim_div.getBoundingClientRect().top - 50)
+  window.scrollTo({top: h})
 })
 
 habilidades_option.addEventListener('click', () => {
-  sobremim_option.classList.remove(ativo)
-  habilidades_option.classList.add(ativo)
-  hobbies_option.classList.remove(ativo)
-  scrollTo(0, 1750)
+  let h = (habilidades_div.getBoundingClientRect().top - 50)
+  window.scrollTo({top: h})
 })
 
 hobbies_option.addEventListener('click', () => {
-  sobremim_option.classList.remove(ativo)
-  habilidades_option.classList.remove(ativo)
-  hobbies_option.classList.add(ativo)
+  let h = (hobbies_div.getBoundingClientRect().top - 50)
+  window.scrollTo({top: h})
 })
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
-
   for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 50;
-
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 100
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
     } else {
@@ -72,11 +72,5 @@ function reveal() {
     }
   }
 }
-
-window.addEventListener("scroll", function () {
-  header.classList.toggle("fixed", window.scrollY > 100)
-  hero.classList.toggle("margintop", window.scrollY > 100)
-})
-
 
 window.addEventListener("scroll", reveal);
