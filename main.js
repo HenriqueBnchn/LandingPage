@@ -1,13 +1,9 @@
 
 
 const root = document.querySelector(':root')
-const body = document.querySelector('body')
 
 const btn_switch_on = document.querySelector(".on")
 const btn_switch_off = document.querySelector(".off")
-
-const header = document.querySelector(".header")
-const hero = document.querySelector(".hero_div")
 
 const home_option = document.querySelector('#home_option')
 const hero_div = document.querySelector('.hero_div')
@@ -24,8 +20,9 @@ const hobbies_option = document.querySelector('#hobbies_option')
 const hobbies_div = document.querySelector('.hobbies_div')
 const hobbies_h = hobbies_div.getBoundingClientRect().top - 150
 
-const social_icons = document.querySelectorAll('.social svg')
-
+const contato_option = document.querySelector('#contato_option')
+const contato_div = document.querySelector('.contato_div')
+const contato_h = hobbies_div.getBoundingClientRect().top
 
 ////////////////////////////////////////////// trocar cor geral //////////////////////////////////////////
 
@@ -33,19 +30,12 @@ btn_switch_on.addEventListener('click', () => {
   root.classList.remove('light')
   btn_switch_on.style.display = 'none'
   btn_switch_off.style.display = 'block'
-
-  social_icons.forEach(icon => {
-    icon.setAttribute('fill', '#fff')
-  })
 })
 
 btn_switch_off.addEventListener('click', () => {
   root.classList.add('light')
   btn_switch_off.style.display = 'none'
   btn_switch_on.style.display = 'block'
-  social_icons.forEach(icon => {
-    icon.setAttribute('fill', '#000')
-  })
 })
 
 
@@ -66,6 +56,9 @@ hobbies_option.addEventListener('click', () => {
   window.scrollTo({top: hobbies_h})
 })
 
+contato_option.addEventListener('click', () => {
+  window.scrollTo({top: 10000})
+})
 
 ////////////////////////////////////////////// revelar texto //////////////////////////////////////////
 
